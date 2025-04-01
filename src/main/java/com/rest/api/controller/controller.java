@@ -10,7 +10,7 @@ public class controller {
 	
 	@GetMapping("/test")
 	public String hello() {
-		return "Todays date is " + LocalDate.now().toString();
+		return "Hello,Todays date is " + LocalDate.now().toString();
 	}
 
 }

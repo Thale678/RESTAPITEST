@@ -1,11 +1,14 @@
-FROM tomcat:10-jdk17
-LABEL maintainer="ManishThale"
+# 1️⃣ Use an official Java runtime as a base image
+FROM openjdk:17-jdk-slim
 
-# Copy the WAR file into Tomcat's webapps directory
-COPY target/resttest.war /usr/local/tomcat/webapps/
+# 2️⃣ Set the working directory inside the container
+WORKDIR /app
 
-# Expose the port (default Tomcat port)
-EXPOSE 8080
+# 3️⃣ Copy the JAR file into the container
+COPY target/RESTAPI.jar app.jar
 
-# Start Tomcat
-CMD ["catalina.sh", "run"]
+# 4️⃣ Expose the application port
+EXPOSE 8083
+
+# 5️⃣ Run the application
+CMD ["javacd ", "-jar", "app.jar"]

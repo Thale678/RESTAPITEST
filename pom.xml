@@ -12,7 +12,7 @@
 	<artifactId>RestAPI</artifactId>
 	<version>1.0.0</version>
 	<name>21-RestAPI</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<description>Spring Boot Web App with Jenkins Tomcat Deployment</description>
 	<url/>
 	<licenses>
